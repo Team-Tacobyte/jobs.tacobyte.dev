@@ -7,6 +7,14 @@ body {
 
 }
 
+.header {
+    
+}
+
+.jobs {
+    background-color: #363636;
+}
+
 .text {
     color: white;
     text-align: center;
@@ -39,3 +47,4 @@ body {
   .white {
       color: white;
   }
+

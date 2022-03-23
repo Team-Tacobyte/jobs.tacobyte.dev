@@ -1,3 +1,3 @@
 function redirect() {
-    window.location.href = "index.hasdftml";
+    window.location.href = "/pages/test.html";
 }
