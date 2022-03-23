@@ -25,6 +25,11 @@ a {
     margin: 0cm;
 }
 
+.perks_benefits {
+    color: white;
+    background-color: #b36500;
+}
+
 .text {
     color: white;
     text-align: center;
