@@ -2,28 +2,40 @@
 
 body {
     /* background-color: #121212;*/
-    background-color: #7289DA;
+    background-color: #202020;
     font-family: 'Montserrat', sans-serif;
+    margin: 0cm;
 
 }
 
 .header {
-    
+    text-align: center;
+    color: white;
+    background-color: #3a4400;
+    padding-bottom: 20cm;
+    padding-top: 5cm;
+}
+a {
+    display: inline-block;
+    color: rgb(208, 158, 255);
 }
 
 .jobs {
     background-color: #363636;
+    margin: 0cm;
 }
 
 .text {
     color: white;
     text-align: center;
     font-size: large;
+
 }
 
 .title {
     color: white;
     text-align: center;
+    margin: 0;
 }
 
 button {
