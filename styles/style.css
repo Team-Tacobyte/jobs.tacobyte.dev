@@ -20,6 +20,12 @@ a {
     color: rgb(208, 158, 255);
 }
 
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-top: 2%;
+}
+
 .jobs {
     background-color: #363636;
     margin: 0cm;
