@@ -1,3 +1,3 @@
 function redirect() {
-    window.location.href = "/pages/test.html";
+    window.location.href = "https://forms.gle/BC36HuCQDAo1scUc7";
 }
