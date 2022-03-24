@@ -29,6 +29,7 @@ a {
     color: white;
     text-align: center;
     font-size: large;
+    margin: 0cm;
 
 }
 
@@ -59,5 +60,34 @@ button {
 
 .white {
     color: white;
-  }
+}
 
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b36500;
+}
+  
+.nav-links li {
+    float: left;
+}
+  
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 500ms ;
+}
+  
+  /* Change the link color to #532f00 on hover */
+.nav-links li a:hover {
+    background-color: #532f00;
+}
+
+.undertext {
+    font-family: 'Montserrat', sans-serif;
+}
