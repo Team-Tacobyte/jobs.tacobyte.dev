@@ -25,6 +25,13 @@ a {
     margin: 0cm;
 }
 
+footer {
+    color: white;
+    background-color: orange;
+    padding-bottom: 3yeacm;
+    padding-top: 0.5cm;
+}
+
 .perks_benefits {
     color: white;
     background-color: #b36500;
