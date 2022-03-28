@@ -1,5 +1,5 @@
 # TacoByte Official License.
-## Copyright 2021 TacoByte
+## Copyright 2022 TacoByte
 **TacoByte** Open Source License.
 
 - Plagiarism of any projects from the TacoByte Community will lead to legal conflict.
