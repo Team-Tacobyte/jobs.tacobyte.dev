@@ -1,197 +1,525 @@
-<form
-  action="//submit.form"
-  id="EmploymentApplication100"
-  method="post"
-  onsubmit="return ValidateForm(this);"
->
-  <script type="text/javascript">
-    function ValidateForm(frm) {
-      if (frm.First_Name.value == "") {
-        alert("First name is required.");
-        frm.First_Name.focus();
-        return false;
-      }
-      if (frm.Last_Name.value == "") {
-        alert("Last name is required.");
-        frm.Last_Name.focus();
-        return false;
-      }
-      if (frm.Email_Address.value == "") {
-        alert("Email address is required.");
-        frm.Email_Address.focus();
-        return false;
-      }
-      if (
-        frm.Email_Address.value.indexOf("@") < 1 ||
-        frm.Email_Address.value.indexOf(".") < 1
-      ) {
-        alert("Please enter a valid email address.");
-        frm.Email_Address.focus();
-        return false;
-      }
-      if (frm.Position.value == "") {
-        alert("Position is required.");
-        frm.Position.focus();
-        return false;
-      }
-      if (frm.Phone.value == "") {
-        alert("Phone is required.");
-        frm.Phone.focus();
-        return false;
-      }
-      return true;
-    }
-  </script>
-  <table border="0" cellpadding="5" cellspacing="0">
-    <tr>
-      <td style="width: 50%">
-        <label for="First_Name"><b>First name *</b></label
-        ><br />
-        <input
-          name="First_Name"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-      <td style="width: 50%">
-        <label for="Last_Name"><b>Last name *</b></label
-        ><br />
-        <input
-          name="Last_Name"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Email_Address"><b>Email *</b></label
-        ><br />
-        <input
-          name="Email_Address"
-          type="text"
-          maxlength="100"
-          style="width: 100%; max-width: 535px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Portfolio"><b>Portfolio website</b></label
-        ><br />
-        <input
-          name="Portfolio"
-          type="text"
-          maxlength="255"
-          value="http://"
-          style="width: 100%; max-width: 535px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Position"><b>Position you are applying for *</b></label
-        ><br />
-        <input
-          name="Position"
-          type="text"
-          maxlength="100"
-          style="width: 100%; max-width: 535px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="Salary"><b>Salary requirements</b></label
-        ><br />
-        <input
-          name="Salary"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-      <td>
-        <label for="StartDate"><b>When can you start?</b></label
-        ><br />
-        <input
-          name="StartDate"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="Phone"><b>Phone *</b></label
-        ><br />
-        <input
-          name="Phone"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-      <td>
-        <label for="Fax"><b>Fax</b></label
-        ><br />
-        <input
-          name="Fax"
-          type="text"
-          maxlength="50"
-          style="width: 100%; max-width: 260px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Relocate"><b>Are you willing to relocate?</b></label
-        ><br />
-        <input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes
-        <input name="Relocate" type="radio" value="No" /> No
-        <input name="Relocate" type="radio" value="NotSure" /> Not sure
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Organization"><b>Last company you worked for</b></label
-        ><br />
-        <input
-          name="Organization"
-          type="text"
-          maxlength="100"
-          style="width: 100%; max-width: 535px"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <label for="Reference"><b>Reference / Comments / Questions</b></label
-        ><br />
-        <textarea
-          name="Reference"
-          rows="7"
-          cols="40"
-          style="width: 100%; max-width: 535px"
-        ></textarea>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" style="text-align: center">
-        <div style="float: right">
-          <a href="https://www.100forms.com" id="lnk100" title="form to email"
-            >form to email</a
-          >
-        </div>
-        <script
-          src="https://www.100forms.com/js/FORMKEY:DP39Q3FRF8AT/SEND:my@email.com"
-          type="text/javascript"
-        ></script>
-        <input name="skip_submit" type="submit" value="Send Application" />
-      </td>
-    </tr>
-  </table>
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
+  <div style="max-width: 400px"></div>
+  <div style="display: flex; padding-bottom: 18px; max-width: 450px">
+    <div style="margin-left: 0; margin-right: 1%; width: 49%">
+      First name<span style="color: red"> *</span><br />
+      <input
+        type="text"
+        id="data_1"
+        name="data_1"
+        style="max-width: 100%"
+        class="form-control"
+      />
+    </div>
+    <div style="margin-left: 1%; margin-right: 0; width: 49%">
+      Last name<span style="color: red"> *</span><br />
+      <input
+        type="text"
+        id="data_2"
+        name="data_2"
+        style="max-width: 100%"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div style="padding-bottom: 18px">
+    Email<span style="color: red"> *</span><br />
+    <input
+      type="text"
+      id="data_3"
+      name="data_3"
+      style="max-width: 450px"
+      class="form-control"
+    />
+  </div>
+  <div style="padding-bottom: 18px">
+    Country<br />
+    <select
+      id="data_5"
+      name="data_5"
+      style="max-width: 450px"
+      class="form-control"
+    >
+      <option>Afghanistan</option>
+      <option>Åland Islands</option>
+      <option>Albania</option>
+      <option>Algeria</option>
+      <option>American Samoa</option>
+      <option>Andorra</option>
+      <option>Angola</option>
+      <option>Anguilla</option>
+      <option>Antigua and Barbuda</option>
+      <option>Argentina</option>
+      <option>Armenia</option>
+      <option>Aruba</option>
+      <option>Australia</option>
+      <option>Austria</option>
+      <option>Azerbaijan</option>
+      <option>Bangladesh</option>
+      <option>Barbados</option>
+      <option>Bahamas</option>
+      <option>Bahrain</option>
+      <option>Belarus</option>
+      <option>Belgium</option>
+      <option>Belize</option>
+      <option>Benin</option>
+      <option>Bermuda</option>
+      <option>Bhutan</option>
+      <option>Bolivia</option>
+      <option>Bosnia and Herzegovina</option>
+      <option>Botswana</option>
+      <option>Brazil</option>
+      <option>British Indian Ocean Territory</option>
+      <option>British Virgin Islands</option>
+      <option>Brunei Darussalam</option>
+      <option>Bulgaria</option>
+      <option>Burkina Faso</option>
+      <option>Burma</option>
+      <option>Burundi</option>
+      <option>Cambodia</option>
+      <option>Cameroon</option>
+      <option>Canada</option>
+      <option>Cape Verde</option>
+      <option>Cayman Islands</option>
+      <option>Central African Republic</option>
+      <option>Chad</option>
+      <option>Chile</option>
+      <option>China</option>
+      <option>Christmas Island</option>
+      <option>Cocos (Keeling) Islands</option>
+      <option>Colombia</option>
+      <option>Comoros</option>
+      <option>Congo-Brazzaville</option>
+      <option>Congo-Kinshasa</option>
+      <option>Cook Islands</option>
+      <option>Costa Rica</option>
+      <option>Croatia</option>
+      <option>Curaçao</option>
+      <option>Cyprus</option>
+      <option>Czech Republic</option>
+      <option>Denmark</option>
+      <option>Djibouti</option>
+      <option>Dominica</option>
+      <option>Dominican Republic</option>
+      <option>East Timor</option>
+      <option>Ecuador</option>
+      <option>El Salvador</option>
+      <option>Egypt</option>
+      <option>Equatorial Guinea</option>
+      <option>Eritrea</option>
+      <option>Estonia</option>
+      <option>Ethiopia</option>
+      <option>Falkland Islands</option>
+      <option>Faroe Islands</option>
+      <option>Federated States of Micronesia</option>
+      <option>Fiji</option>
+      <option>Finland</option>
+      <option>France</option>
+      <option>French Guiana</option>
+      <option>French Polynesia</option>
+      <option>French Southern Lands</option>
+      <option>Gabon</option>
+      <option>Gambia</option>
+      <option>Georgia</option>
+      <option>Germany</option>
+      <option>Ghana</option>
+      <option>Gibraltar</option>
+      <option>Greece</option>
+      <option>Greenland</option>
+      <option>Grenada</option>
+      <option>Guadeloupe</option>
+      <option>Guam</option>
+      <option>Guatemala</option>
+      <option>Guernsey</option>
+      <option>Guinea</option>
+      <option>Guinea-Bissau</option>
+      <option>Guyana</option>
+      <option>Haiti</option>
+      <option>Heard and McDonald Islands</option>
+      <option>Honduras</option>
+      <option>Hong Kong</option>
+      <option>Hungary</option>
+      <option>Iceland</option>
+      <option>India</option>
+      <option>Indonesia</option>
+      <option>Iraq</option>
+      <option>Ireland</option>
+      <option>Isle of Man</option>
+      <option>Israel</option>
+      <option>Italy</option>
+      <option>Jamaica</option>
+      <option>Japan</option>
+      <option>Jersey</option>
+      <option>Jordan</option>
+      <option>Kazakhstan</option>
+      <option>Kenya</option>
+      <option>Kiribati</option>
+      <option>Kuwait</option>
+      <option>Kyrgyzstan</option>
+      <option>Laos</option>
+      <option>Latvia</option>
+      <option>Lebanon</option>
+      <option>Lesotho</option>
+      <option>Liberia</option>
+      <option>Libya</option>
+      <option>Liechtenstein</option>
+      <option>Lithuania</option>
+      <option>Luxembourg</option>
+      <option>Macau</option>
+      <option>Macedonia</option>
+      <option>Madagascar</option>
+      <option>Malawi</option>
+      <option>Malaysia</option>
+      <option>Maldives</option>
+      <option>Mali</option>
+      <option>Malta</option>
+      <option>Marshall Islands</option>
+      <option>Martinique</option>
+      <option>Mauritania</option>
+      <option>Mauritius</option>
+      <option>Mayotte</option>
+      <option>Mexico</option>
+      <option>Moldova</option>
+      <option>Monaco</option>
+      <option>Mongolia</option>
+      <option>Montenegro</option>
+      <option>Montserrat</option>
+      <option>Morocco</option>
+      <option>Mozambique</option>
+      <option>Namibia</option>
+      <option>Nauru</option>
+      <option>Nepal</option>
+      <option>Netherlands</option>
+      <option>New Caledonia</option>
+      <option>New Zealand</option>
+      <option>Nicaragua</option>
+      <option>Niger</option>
+      <option>Nigeria</option>
+      <option>Niue</option>
+      <option>Norfolk Island</option>
+      <option>Northern Mariana Islands</option>
+      <option>Norway</option>
+      <option>Oman</option>
+      <option>Pakistan</option>
+      <option>Palau</option>
+      <option>Panama</option>
+      <option>Papua New Guinea</option>
+      <option>Paraguay</option>
+      <option>Peru</option>
+      <option>Philippines</option>
+      <option>Pitcairn Islands</option>
+      <option>Poland</option>
+      <option>Portugal</option>
+      <option>Puerto Rico</option>
+      <option>Qatar</option>
+      <option>Réunion</option>
+      <option>Romania</option>
+      <!-- <option>Russia</option> -->
+      <option>Rwanda</option>
+      <option>Saint Barthélemy</option>
+      <option>Saint Helena</option>
+      <option>Saint Kitts and Nevis</option>
+      <option>Saint Lucia</option>
+      <option>Saint Martin</option>
+      <option>Saint Pierre and Miquelon</option>
+      <option>Saint Vincent</option>
+      <option>Samoa</option>
+      <option>San Marino</option>
+      <option>São Tomé and Príncipe</option>
+      <option>Saudi Arabia</option>
+      <option>Senegal</option>
+      <option>Serbia</option>
+      <option>Seychelles</option>
+      <option>Sierra Leone</option>
+      <option>Singapore</option>
+      <option>Sint Maarten</option>
+      <option>Slovakia</option>
+      <option>Slovenia</option>
+      <option>Solomon Islands</option>
+      <option>Somalia</option>
+      <option>South Africa</option>
+      <option>South Georgia</option>
+      <option>South Korea</option>
+      <option>Spain</option>
+      <option>Sri Lanka</option>
+      <option>Sudan</option>
+      <option>Suriname</option>
+      <option>Svalbard and Jan Mayen</option>
+      <option>Sweden</option>
+      <option>Swaziland</option>
+      <option>Switzerland</option>
+      <option>Syria</option>
+      <option>Taiwan</option>
+      <option>Tajikistan</option>
+      <option>Tanzania</option>
+      <option>Thailand</option>
+      <option>Togo</option>
+      <option>Tokelau</option>
+      <option>Tonga</option>
+      <option>Trinidad and Tobago</option>
+      <option>Tunisia</option>
+      <option>Turkey</option>
+      <option>Turkmenistan</option>
+      <option>Turks and Caicos Islands</option>
+      <option>Tuvalu</option>
+      <option>Uganda</option>
+      <option>Ukraine</option>
+      <option>United Arab Emirates</option>
+      <option>United Kingdom</option>
+      <option>United States</option>
+      <option>Uruguay</option>
+      <option>Uzbekistan</option>
+      <option>Vanuatu</option>
+      <option>Vatican City</option>
+      <option>Vietnam</option>
+      <option>Venezuela</option>
+      <option>Wallis and Futuna</option>
+      <option>Western Sahara</option>
+      <option>Yemen</option>
+      <option>Zambia</option>
+      <option>Zimbabwe</option>
+    </select>
+  </div>
+  <div style="padding-bottom: 18px">
+    What is your discord tag?<span style="color: red"> *</span><br />
+    <input
+      type="text"
+      id="data_6"
+      name="data_6"
+      style="max-width: 450px"
+      class="form-control"
+    />
+  </div>
+  <div style="padding-bottom: 18px">
+    What job are you apply too<span style="color: red"> *</span><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_0"
+        name="data_7"
+        value="Senior Software Engineer - Comunications and Video"
+      />
+      Senior Software Engineer - Comunications and Video</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_1"
+        name="data_7"
+        value="Senior Software Engineer - Revenue"
+      />
+      Senior Software Engineer - Revenue</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_2"
+        name="data_7"
+        value="Senior Software Engineer - Site reliability and upkeep"
+      />
+      Senior Software Engineer - Site reliability and upkeep</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_3"
+        name="data_7"
+        value="Saftey and Secruity Engineer - Keeps the website and the community safe and sound!"
+      />
+      Saftey and Secruity Engineer - Keeps the website and the community safe
+      and sound!</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_4"
+        name="data_7"
+        value="Software Engineer - Developer Tools"
+      />
+      Software Engineer - Developer Tools</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_5"
+        name="data_7"
+        value="Software Engineer - Product"
+      />
+      Software Engineer - Product</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_6"
+        name="data_7"
+        value="Discord Moderator"
+      />
+      Discord Moderator</span
+    ><br />
+    <span
+      ><input type="radio" id="data_7_7" name="data_7" value="Discord Admin" />
+      Discord Admin</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_8"
+        name="data_7"
+        value="Fourms Moderator"
+      />
+      Fourms Moderator</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_9"
+        name="data_7"
+        value="Product Manager"
+      />
+      Product Manager</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_10"
+        name="data_7"
+        value="Senior Product Manager"
+      />
+      Senior Product Manager</span
+    ><br />
+    <span
+      ><input type="radio" id="data_7_11" name="data_7" value="UI Designer" />
+      UI Designer</span
+    ><br />
+    <span
+      ><input type="radio" id="data_7_12" name="data_7" value="Data analyze" />
+      Data analyze</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_13"
+        name="data_7"
+        value="Customer support service"
+      />
+      Customer support service</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_14"
+        name="data_7"
+        value="Developer Advocate"
+      />
+      Developer Advocate</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_15"
+        name="data_7"
+        value="Community Manager"
+      />
+      Community Manager</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_16"
+        name="data_7"
+        value="Social Media manager"
+      />
+      Social Media manager</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_17"
+        name="data_7"
+        value="Social Media cordinator"
+      />
+      Social Media cordinator</span
+    ><br />
+    <span
+      ><input
+        type="radio"
+        id="data_7_18"
+        name="data_7"
+        value="Community Announcemenmts cordinator"
+      />
+      Community Announcemenmts cordinator</span
+    ><br />
+  </div>
+  <div style="padding-bottom: 18px">
+    <input name="skip_Submit" value="Submit" type="submit" />
+  </div>
+  <div>
+    <div style="float: right">
+      <a href="https://www.100forms.com" id="lnk100" title="form to email"
+        >form to email</a
+      >
+    </div>
+    <script
+      src="https://www.100forms.com/js/FORMKEY:B85T9JRGGPC8"
+      type="text/javascript"
+    ></script>
+  </div>
 </form>
+
+<script type="text/javascript">
+  function validateForm() {
+    if (isEmpty(document.getElementById("data_1").value.trim())) {
+      alert("First name is required!");
+      return false;
+    }
+    if (isEmpty(document.getElementById("data_2").value.trim())) {
+      alert("Last name is required!");
+      return false;
+    }
+    if (isEmpty(document.getElementById("data_3").value.trim())) {
+      alert("Email is required!");
+      return false;
+    }
+    if (!validateEmail(document.getElementById("data_3").value.trim())) {
+      alert("Email must be a valid email address!");
+      return false;
+    }
+    if (isEmpty(document.getElementById("data_6").value.trim())) {
+      alert("What is your discord tag? is required!");
+      return false;
+    }
+    if (
+      !document.getElementById("data_7_0").checked &&
+      !document.getElementById("data_7_1").checked &&
+      !document.getElementById("data_7_2").checked &&
+      !document.getElementById("data_7_3").checked &&
+      !document.getElementById("data_7_4").checked &&
+      !document.getElementById("data_7_5").checked &&
+      !document.getElementById("data_7_6").checked &&
+      !document.getElementById("data_7_7").checked &&
+      !document.getElementById("data_7_8").checked &&
+      !document.getElementById("data_7_9").checked &&
+      !document.getElementById("data_7_10").checked &&
+      !document.getElementById("data_7_11").checked &&
+      !document.getElementById("data_7_12").checked &&
+      !document.getElementById("data_7_13").checked &&
+      !document.getElementById("data_7_14").checked &&
+      !document.getElementById("data_7_15").checked &&
+      !document.getElementById("data_7_16").checked &&
+      !document.getElementById("data_7_17").checked &&
+      !document.getElementById("data_7_18").checked
+    ) {
+      alert("What job are you apply too is required!");
+      return false;
+    }
+    return true;
+  }
+  function isEmpty(str) {
+    return str.length === 0 || !str.trim();
+  }
+  function validateEmail(email) {
+    var re =
+      /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+    return isEmpty(email) || re.test(email);
+  }
+</script>
