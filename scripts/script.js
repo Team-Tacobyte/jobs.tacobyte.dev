@@ -24,3 +24,7 @@ function moderation_redirect() {
 function product_redirect() {
     window.location.href = "/pages/jobs/product/index.html";
 }
+
+// function auto_copyright(){
+    
+// }

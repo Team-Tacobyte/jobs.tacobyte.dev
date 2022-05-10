@@ -1,8 +1,9 @@
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 body {
-    /* background-color: #121212;*/
-    background-color: #202020;
+    background-color: #363636;
+    /* background-color: #202020; */
     font-family: 'Montserrat', sans-serif;
     margin: 0cm;
 
@@ -108,4 +109,23 @@ button {
 
 .undertext {
     font-family: 'Montserrat', sans-serif;
+}
+#footerlist li
+{
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: orange;
+}
+.fa-github:hover {
+    background-color: rgb(148, 96, 0);
 }
