@@ -214,7 +214,6 @@
       <option>Qatar</option>
       <option>Réunion</option>
       <option>Romania</option>
-      <!-- <option>Russia</option> -->
       <option>Rwanda</option>
       <option>Saint Barthélemy</option>
       <option>Saint Helena</option>
@@ -451,6 +450,40 @@
     ><br />
   </div>
   <div style="padding-bottom: 18px">
+    What are your past experiences that will help you with the job you are
+    applying for<br />
+    <textarea
+      id="data_10"
+      false
+      name="data_10"
+      style="max-width: 450px"
+      rows="6"
+      class="form-control"
+    ></textarea>
+  </div>
+  <div style="padding-bottom: 18px">
+    what would you say are your strengths and weaknesses<br />
+    <textarea
+      id="data_11"
+      false
+      name="data_11"
+      style="max-width: 450px"
+      rows="10"
+      class="form-control"
+    ></textarea>
+  </div>
+  <div style="padding-bottom: 18px">
+    what is your ideal working environment<span style="color: red"> *</span
+    ><br />
+    <input
+      type="text"
+      id="data_13"
+      name="data_13"
+      style="max-width: 450px"
+      class="form-control"
+    />
+  </div>
+  <div style="padding-bottom: 18px">
     <input name="skip_Submit" value="Submit" type="submit" />
   </div>
   <div>
@@ -510,6 +543,10 @@
       !document.getElementById("data_7_18").checked
     ) {
       alert("What job are you apply too is required!");
+      return false;
+    }
+    if (isEmpty(document.getElementById("data_13").value.trim())) {
+      alert("what is your ideal working environment is required!");
       return false;
     }
     return true;
