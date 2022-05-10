@@ -473,15 +473,15 @@
     ></textarea>
   </div>
   <div style="padding-bottom: 18px">
-    what is your ideal working environment<span style="color: red"> *</span
-    ><br />
-    <input
-      type="text"
-      id="data_13"
-      name="data_13"
+    what is your ideal working environment<br />
+    <textarea
+      id="data_14"
+      false
+      name="data_14"
       style="max-width: 450px"
+      rows="6"
       class="form-control"
-    />
+    ></textarea>
   </div>
   <div style="padding-bottom: 18px">
     <input name="skip_Submit" value="Submit" type="submit" />
@@ -543,10 +543,6 @@
       !document.getElementById("data_7_18").checked
     ) {
       alert("What job are you apply too is required!");
-      return false;
-    }
-    if (isEmpty(document.getElementById("data_13").value.trim())) {
-      alert("what is your ideal working environment is required!");
       return false;
     }
     return true;
